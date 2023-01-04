@@ -115,16 +115,11 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.treesitter.ensure_installed = {
   "bash",
   "c",
-  "javascript",
+  "cpp",
   "json",
   "lua",
   "python",
-  "typescript",
-  "tsx",
   "css",
-  "rust",
-  "java",
-  "yaml",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -213,7 +208,7 @@ lvim.plugins = {
 
   {
     "phaazon/hop.nvim",
-    event = "BufRead",
+    -- event = "BufRead",
     config = function()
       require("hop").setup()
       vim.api.nvim_set_keymap("n", ";c", ":HopChar2<cr>", { silent = true })
