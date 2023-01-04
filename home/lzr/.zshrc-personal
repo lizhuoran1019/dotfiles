@@ -1,0 +1,28 @@
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/oh-my-zsh/plugins/sudo/sudo.plugin.zsh
+source /usr/share/oh-my-zsh/plugins/z/z.plugin.zsh
+
+# 环境变量
+export EDITOR="lvim"
+
+# Aliases
+alias ra='ranger'
+alias lzg='lazygit'
+alias cman='man -M /usr/share/man/zh_CN'
+
+
+# 添加设置代理指令
+export win_hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
+alias setproxy='export all_proxy="socks5://${win_hostip}:10810";git config --global proxy.https socks5://$win_hostip:10810;curl myip.ipip.net'
+alias unsetproxy='unset all_proxy;git config --global --unset proxy.https;curl myip.ipip.net'
+
+# 自动进入TMUX
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
+# fzf
+source $HOME/.zsh/fzf.zsh
+
