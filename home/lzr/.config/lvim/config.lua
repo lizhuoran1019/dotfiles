@@ -243,6 +243,15 @@ lvim.plugins = {
 			keybinds("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
 		end,
 	},
+
+	{
+		"iamcco/markdown-preview.nvim",
+		run = "cd app && npm install",
+		ft = "markdown",
+		config = function()
+			vim.g.mkdp_auto_start = 1
+		end,
+	},
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
