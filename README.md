@@ -1,5 +1,3 @@
-# Summary
-
 # zsh
 ```
 yay -S zsh oh-my-zsh-git
