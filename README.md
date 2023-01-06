@@ -1,5 +1,14 @@
 # Summary
 
+# zsh
+```
+yay -S zsh oh-my-zsh-git
+```
+## 插件
+```
+yay -S zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-vi-mode
+```
+
 # ranger
 参考网页：[ranger配置和使用](https://www.zssnp.top/2021/06/03/ranger/#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%9B%BE%E6%A0%87)
 
