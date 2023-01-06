@@ -12,6 +12,7 @@ export EDITOR="lvim"
 alias ra='ranger'
 alias lzg='lazygit'
 alias cman='man -M /usr/share/man/zh_CN'
+alias mux='tmuxinator'
 
 
 # 添加设置代理指令
@@ -21,7 +22,8 @@ alias unsetproxy='unset all_proxy;git config --global --unset proxy.https;curl m
 
 # 自动进入TMUX
 if [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
+    # tmux attach -t default || tmux new -s default
+    mux start default
 fi
 
 # fzf
