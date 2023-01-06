@@ -72,18 +72,18 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
 lvim.builtin.telescope.defaults.mappings = {
-	-- for input mode
-	i = {
-		["<C-j>"] = actions.move_selection_next,
-		["<C-k>"] = actions.move_selection_previous,
-		["<C-n>"] = actions.cycle_history_next,
-		["<C-p>"] = actions.cycle_history_prev,
-	},
-	-- for normal mode
-	n = {
-		["<C-j>"] = actions.move_selection_next,
-		["<C-k>"] = actions.move_selection_previous,
-	},
+  -- for input mode
+  i = {
+    ["<C-j>"] = actions.move_selection_next,
+    ["<C-k>"] = actions.move_selection_previous,
+    ["<C-n>"] = actions.cycle_history_next,
+    ["<C-p>"] = actions.cycle_history_prev,
+  },
+  -- for normal mode
+  n = {
+    ["<C-j>"] = actions.move_selection_next,
+    ["<C-k>"] = actions.move_selection_previous,
+  },
 }
 
 -- Change theme settings
@@ -94,13 +94,13 @@ lvim.builtin.telescope.defaults.mappings = {
 -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
-	name = "+Trouble",
-	r = { "<cmd>Trouble lsp_references<cr>", "References" },
-	f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
-	d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
-	q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
-	l = { "<cmd>Trouble loclist<cr>", "LocationList" },
-	w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
+  name = "+Trouble",
+  r = { "<cmd>Trouble lsp_references<cr>", "References" },
+  f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
+  d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
+  q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
+  l = { "<cmd>Trouble loclist<cr>", "LocationList" },
+  w = { "<cmd>Trouble workspace_diagnostics<cr>", "Workspace Diagnostics" },
 }
 
 -- TODO: User Config for predefined plugins
@@ -113,13 +113,13 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-	"bash",
-	"c",
-	"cpp",
-	"json",
-	"lua",
-	"python",
-	"css",
+  "bash",
+  "c",
+  "cpp",
+  "json",
+  "lua",
+  "python",
+  "css",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -129,8 +129,8 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- -- make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {
-	"clangd",
-	"cmake",
+  "clangd",
+  "cmake",
 }
 -- -- change UI setting of `LspInstallInfo`
 -- -- see <https://github.com/williamboman/nvim-lsp-installer#default-configuration>
@@ -167,12 +167,12 @@ lvim.lsp.installer.setup.ensure_installed = {
 -- end
 
 -- -- set a formatter, this will override the language server formatting capabilities (if it exists)
-local formatters = require("lvim.lsp.null-ls.formatters")
-formatters.setup({
-	{ command = "clang-format", filetypes = { "c", "cpp", "cs", "java", "cuda" } },
-	{ command = "stylua", filetypes = { "lua", "luau" } },
-	{ command = "cmake_format", filetypes = { "cmake" } },
-})
+-- local formatters = require("lvim.lsp.null-ls.formatters")
+-- formatters.setup({
+-- 	{ command = "clang-format", filetypes = { "c", "cpp", "cs", "java", "cuda" } },
+-- 	{ command = "stylua", filetypes = { "lua", "luau" } },
+-- 	{ command = "cmake_format", filetypes = { "cmake" } },
+-- })
 
 -- -- set additional linters
 -- local linters = require "lvim.lsp.null-ls.linters"
@@ -194,64 +194,64 @@ formatters.setup({
 
 -- Additional Plugins
 lvim.plugins = {
-	{
-		"folke/trouble.nvim",
-		cmd = "TroubleToggle",
-	},
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
+  },
 
-	{
-		"phaazon/hop.nvim",
-		-- event = "BufRead",
-		config = function()
-			require("hop").setup()
-			vim.api.nvim_set_keymap("n", ";c", ":HopChar2<cr>", { silent = true })
-			vim.api.nvim_set_keymap("n", ";w", ":HopWord<cr>", { silent = true })
-			vim.api.nvim_set_keymap("n", ";l", ":HopLineStart<cr>", { silent = true })
-		end,
-	},
+  {
+    "phaazon/hop.nvim",
+    -- event = "BufRead",
+    config = function()
+      require("hop").setup()
+      vim.api.nvim_set_keymap("n", ";c", ":HopChar2<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", ";w", ":HopWord<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", ";l", ":HopLineStart<cr>", { silent = true })
+    end,
+  },
 
-	{
-		"tpope/vim-surround",
+  {
+    "tpope/vim-surround",
 
-		-- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
-		-- setup = function()
-		--  vim.o.timeoutlen = 500
-		-- end
-	},
+    -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
+    -- setup = function()
+    --  vim.o.timeoutlen = 500
+    -- end
+  },
 
-	{
-		"kevinhwang91/nvim-hlslens",
-		config = function()
-			require("hlslens").setup()
-			local kopts = { noremap = true, silent = true }
-			local keybinds = vim.api.nvim_set_keymap
-			keybinds(
-				"n",
-				"n",
-				[[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
-				kopts
-			)
-			keybinds(
-				"n",
-				"N",
-				[[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
-				kopts
-			)
-			keybinds("n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
-			keybinds("n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
-			keybinds("n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
-			keybinds("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
-		end,
-	},
+  {
+    "kevinhwang91/nvim-hlslens",
+    config = function()
+      require("hlslens").setup()
+      local kopts = { noremap = true, silent = true }
+      local keybinds = vim.api.nvim_set_keymap
+      keybinds(
+        "n",
+        "n",
+        [[<Cmd>execute('normal! ' . v:count1 . 'n')<CR><Cmd>lua require('hlslens').start()<CR>]],
+        kopts
+      )
+      keybinds(
+        "n",
+        "N",
+        [[<Cmd>execute('normal! ' . v:count1 . 'N')<CR><Cmd>lua require('hlslens').start()<CR>]],
+        kopts
+      )
+      keybinds("n", "*", [[*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+      keybinds("n", "#", [[#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+      keybinds("n", "g*", [[g*<Cmd>lua require('hlslens').start()<CR>]], kopts)
+      keybinds("n", "g#", [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
+    end,
+  },
 
-	{
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		ft = "markdown",
-		config = function()
-			vim.g.mkdp_auto_start = 1
-		end,
-	},
+  {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+    config = function()
+      vim.g.mkdp_auto_start = 1
+    end,
+  },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
