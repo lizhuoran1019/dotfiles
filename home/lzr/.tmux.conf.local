@@ -360,6 +360,12 @@ bind -n M-h select-pane -L  # move left
 bind -n M-j select-pane -D  # move left
 bind -n M-k select-pane -U  # move left
 bind -n M-l select-pane -R  # move left
+unbind c
+unbind x
+bind n new-window
+bind c confirm-before -p "kill-pane #W? (y/n)" kill-pane
+bind -n M-c confirm-before -p "kill-pane #W? (y/n)" kill-pane \; select-layout
+bind -n M-Enter split-window \; select-layout
 bind -n M-, previous-window 
 bind -n M-. next-window
 
