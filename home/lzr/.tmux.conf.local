@@ -372,6 +372,10 @@ bind -n M-. next-window
 # move status line to top
 #set -g status-position top
 
+# default main pane size, used in main-vertical and main-horizontal layout
+set-window-option -g main-pane-width 100 # 设置主Pane宽度
+set-window-option -g main-pane-height 80 # 设置主Pane高度
+
 
 # -- tpm -----------------------------------------------------------------------
 
