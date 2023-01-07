@@ -42,13 +42,21 @@ lvim.builtin.telescope.defaults.mappings = {
   },
 }
 
+-- cppassist keybinds
+lvim.keys.normal_mode["<A-o>"] = "<Cmd>SwitchSourceAndHeader<CR>"
+lvim.builtin.which_key.mappings["i"] = {
+  name = "+cppassist",
+  s = { "<Cmd>ImplementInSource<CR>", "ImplementInSource" },
+  h = { "<Cmd>ImplementOutOfClass<CR>", "ImplementOutOfClass" },
+}
+
 -- Change theme settings
 -- lvim.builtin.theme.options.dim_inactive = true
 -- lvim.builtin.theme.options.style = "storm"
 -- lvim.transparent_window = true
 
 -- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
 lvim.builtin.which_key.mappings["t"] = {
   name = "+Trouble",
   r = { "<cmd>Trouble lsp_references<cr>", "References" },
@@ -207,6 +215,29 @@ lvim.plugins = {
     config = function()
       vim.g.mkdp_auto_start = 1
     end,
+  },
+
+  {
+    "simrat39/symbols-outline.nvim",
+    config = function()
+      require('symbols-outline').setup()
+    end
+  },
+
+  {
+    "keaising/im-select.nvim",
+    config = function()
+      require("im_select").setup()
+    end
+  },
+
+  {
+    "Kohirus/cppassist.nvim",
+    ft = { "h", "cpp", "hpp", "c", "cc" },
+    requires = { { "nvim-lua/plenary.nvim" } },
+    config = function()
+      require("cppassist").setup()
+    end
   },
 }
 
