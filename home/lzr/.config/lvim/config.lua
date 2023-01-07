@@ -165,7 +165,7 @@ lvim.plugins = {
 
   {
     "phaazon/hop.nvim",
-    -- event = "BufRead",
+    event = "BufRead",
     config = function()
       require("hop").setup()
       vim.api.nvim_set_keymap("n", ";c", ":HopChar2<cr>", { silent = true })
@@ -238,6 +238,12 @@ lvim.plugins = {
     config = function()
       require("cppassist").setup()
     end
+  },
+
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require "lsp_signature".on_attach() end,
   },
 }
 
