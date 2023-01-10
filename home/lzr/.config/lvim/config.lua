@@ -168,9 +168,12 @@ lvim.plugins = {
     event = "BufRead",
     config = function()
       require("hop").setup()
-      vim.api.nvim_set_keymap("n", ";c", ":HopChar2<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", ";w", ":HopWord<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", ";l", ":HopLineStart<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", ";c", "<cmd>HopChar2<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", ";w", "<cmd>HopWord<cr>", { silent = true })
+      vim.api.nvim_set_keymap("n", ";l", "<cmd>HopLineStart<cr>", { silent = true })
+      vim.api.nvim_set_keymap("v", ";c", "<cmd>HopChar2<cr>", { silent = true })
+      vim.api.nvim_set_keymap("v", ";w", "<cmd>HopWord<cr>", { silent = true })
+      vim.api.nvim_set_keymap("v", ";l", "<cmd>HopLineStart<cr>", { silent = true })
     end,
   },
 
