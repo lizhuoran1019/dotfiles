@@ -4,7 +4,8 @@ yay -S zsh oh-my-zsh-git
 ```
 ## 插件
 ```
-yay -S zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-vi-mode
+yay -S zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-vi-mode oh-my-zsh-plugin-autosuggestions
+
 ```
 
 # ranger
