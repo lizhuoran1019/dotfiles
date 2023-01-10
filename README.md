@@ -1,11 +1,18 @@
 # zsh
+安装：
 ```
 yay -S zsh oh-my-zsh-git
 ```
-## 插件
 ```
-yay -S zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k zsh-vi-mode oh-my-zsh-plugin-autosuggestions
+yay -S zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k oh-my-zsh-plugin-autosuggestions
 
+```
+```
+cp /usr/share/oh-my-zsh/zshrc ~/.zshrc
+```
+然后在.zshrc文件末尾添加
+```
+source $HOME/.zshrc-personal
 ```
 
 # ranger
