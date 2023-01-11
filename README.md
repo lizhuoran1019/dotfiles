@@ -22,6 +22,10 @@ source $HOME/.zshrc-personal
 ```bash
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
+## 预览代码高亮
+```
+yay -S highlight
+```
 ## 图片预览
 ```
 yay -S w3m imlib2
