@@ -6,7 +6,8 @@ source /usr/share/oh-my-zsh/plugins/sudo/sudo.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/z/z.plugin.zsh
 source /usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # 环境变量
-export EDITOR="lvim"
+# export EDITOR="lvim"
+export EDITOR="nvim"
 
 # Aliases
 alias ra='ranger'

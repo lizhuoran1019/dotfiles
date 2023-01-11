@@ -39,3 +39,6 @@ yay -S w3m imlib2
 ```
 yay -S aur/tmuxinator
 ```
+
+# AstroNvim
+[AstroNvim官网](https://astronvim.github.io/Recipes/custom_plugins)
