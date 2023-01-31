@@ -3,7 +3,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 source /usr/share/oh-my-zsh/plugins/sudo/sudo.plugin.zsh
-source /usr/share/oh-my-zsh/plugins/z/z.plugin.zsh
 source /usr/share/oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # 环境变量
 # export EDITOR="lvim"
