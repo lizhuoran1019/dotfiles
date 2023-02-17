@@ -1,5 +1,5 @@
 #!/bin/bash
 
 
-cd $HOME/Workspace/ns-3-dev/
+cd $NS3
 ./ns3 "$@"
