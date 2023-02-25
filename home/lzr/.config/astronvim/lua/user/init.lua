@@ -4,6 +4,9 @@
 -- You can think of a Lua "table" as a dictionary like data structure the
 -- normal format is "key = value". These also handle array like data structures
 -- where a value with no key simply has an implicit numeric key
+
+-- 使用launch.json debug
+require("dap.ext.vscode").load_launchjs(nil, { cppdbg = { "c", "cpp" } })
 local config = {
         -- Configure AstroNvim updates
         updater = {
