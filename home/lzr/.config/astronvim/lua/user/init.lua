@@ -162,6 +162,8 @@ local config = {
                 mappings = {
                         n = {
                                 -- ["<leader>lf"] = false -- disable formatting keymap
+                                ["<leader>lc"] = { "<Cmd>ImplementInSource<CR>", desc = "Implement in source" },
+                                ["<leader>lC"] = { "<Cmd>ImplementOutOfClass<CR>", desc = "Implement out of class" },
                         },
                 },
                 -- add to the global LSP on_attach function
