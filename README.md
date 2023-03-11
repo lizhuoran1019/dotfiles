@@ -17,6 +17,11 @@ source $HOME/.zshrc-personal
 
 # ranger
 参考网页：[ranger配置和使用](https://www.zssnp.top/2021/06/03/ranger/#%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E5%9B%BE%E6%A0%87)
+```bash
+yay -S ranger_devicons-git
+mkdir ~/.config/ranger/plugins
+ln -sf /usr/share/ranger/plugins/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+```
 
 ## 添加文件管理器图标
 ```bash
