@@ -24,8 +24,12 @@ alias unsetproxy='unset all_proxy;git config --global --unset proxy.https;curl m
 # 自动进入TMUX
 if [ -z "$TMUX" ]; then
     # tmux attach -t default || tmux new -s default
-    mux start default
+    # mux start default
 fi
 
 # fzf
 source $HOME/.zsh/fzf.zsh
+
+# conda
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+source /opt/miniconda/etc/profile.d/conda.sh
